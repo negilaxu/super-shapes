@@ -27,3 +27,15 @@ animate(drawable, {
   alternate: true,
   ease: 'inOutSine',
 });
+
+// Wave animation
+const wavePath = document.querySelector('#wave path')
+const waveDrawable = svg.createDrawable(wavePath)[0]
+
+animate(waveDrawable, {
+    draw: '0 1',
+    duration: 2000,
+    loop: true,
+    alternate: true,
+    ease: 'inOutSine'
+})
