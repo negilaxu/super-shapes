@@ -1,5 +1,24 @@
-body {
-    background-color: #000;
-    color: #fff;
-    font-size: 48px;
+.tunnel circle {
+    transform-box: view-box;
+    transform-origin: center;
+}
+
+.w-200 {
+    width: 200%;
+}
+
+.bg-yellow {
+    background-color: #7cebfc;
+}
+
+.bg-purple {
+    background-color: #ca8cf9;
+}
+
+.bg-yellow {
+    background-color: #fff44c;
+}
+
+.bg-red {
+    background-color: #f9343d;
 }
