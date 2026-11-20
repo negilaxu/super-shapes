@@ -4,3 +4,11 @@ anime.animate('#tunnel circle', {
   loop: true,
   delay: (el, index) => index * 50,
 });
+
+anime.animate('.conveyor', {
+  translateX: '-50%',
+  duration: 1500,
+  loop: true,
+  ease: 'linear',
+  autoplay: true,
+});
