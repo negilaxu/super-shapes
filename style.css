@@ -1,5 +1,6 @@
 .tunnel circle,
-#crosses path {
+#crosses path,
+.squares rect {
     transform-box: view-box;
     transform-origin: center;
 }

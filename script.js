@@ -96,3 +96,13 @@ animate('#flashes .flash', {
   alternate: true,
   ease: 'inOutSine',
 });
+
+// Squares animation
+animate('#squares rect', {
+  rotate: [45, 0, -45],
+  delay: (el, i) => i * 100,
+  duration: 750,
+  loop: true,
+  alternate: true,
+  ease: 'inOutSine',
+});
