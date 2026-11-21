@@ -1,5 +1,12 @@
 const { animate, svg } = anime;
 
+// Duplicating Elements
+const duplicateHtml = (element, quantity) => {
+  const newContent = new Array(quantity).fill(element.innerHTML).join('');
+
+  element.innerHTML = newContent;
+};
+
 // Tunnel animation
 animate('#tunnel circle', {
   scale: [{ to: 1.1, ease: 'inOutSine', duration: 250 }],
@@ -29,12 +36,28 @@ animate(drawable, {
 });
 
 // Wave animation
-const wavePath = document.querySelector('#wave path')
-const waveDrawable = svg.createDrawable(wavePath)[0]
+const wavePath = document.querySelector('#wave path');
+const waveDrawable = svg.createDrawable(wavePath)[0];
 
 animate(waveDrawable, {
-    draw: '0 1',
-    duration: 2000,
+  draw: '0 1',
+  duration: 2000,
+  loop: true,
+  alternate: true,
+  ease: 'inOutSine',
+});
+
+// Cross element
+const crosses = document.querySelector('#crosses')
+duplicateHtml(crosses, 10)
+
+// Cross animation
+animate('#crosses path', {
+    rotate: {
+        to: 360,
+        duration: 1200,
+    },
+    delay: (el, i, l) => i * 100,
     loop: true,
     alternate: true,
     ease: 'inOutSine'

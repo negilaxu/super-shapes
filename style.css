@@ -1,4 +1,5 @@
-.tunnel circle {
+.tunnel circle,
+#crosses path {
     transform-box: view-box;
     transform-origin: center;
 }
