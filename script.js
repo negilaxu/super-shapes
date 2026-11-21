@@ -75,3 +75,14 @@ dots.forEach(dot => {
     ease: 'inOutSine',
   });
 });
+
+// Circles element
+duplicateHtml(document.querySelector('#circles'), 20);
+
+// Circles animation
+animate('#circles .dot', {
+  scale: [{ from: 0, to: 1.2, ease: 'inOutSine', duration: 250 }],
+  delay: (el, i) => i * 100,
+  loop: true,
+  alternate: true,
+});
