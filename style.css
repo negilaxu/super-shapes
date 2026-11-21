@@ -1,3 +1,10 @@
+:root {
+    --blue: #7cebfc;
+    --purple: #ca8cf9;
+    --yellow: #fff44c;
+    --red: #f9343d;
+}
+
 .tunnel circle,
 #crosses path,
 .squares rect {
@@ -5,24 +12,24 @@
     transform-origin: center;
 }
 
-.w-200 {
+.conveyor-track {
     width: 200%;
 }
 
 .bg-blue {
-    background-color: #7cebfc;
+    background-color: var(--blue);
 }
 
 .bg-purple {
-    background-color: #ca8cf9;
+    background-color: var(--purple);
 }
 
 .bg-yellow {
-    background-color: #fff44c;
+    background-color: var(--yellow);
 }
 
 .bg-red {
-    background-color: #f9343d;
+    background-color: var(--red);
 }
 
 .box {
