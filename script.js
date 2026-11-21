@@ -1,4 +1,4 @@
-const { animate, svg } = anime;
+const { animate, svg, utils } = anime;
 
 // Duplicating Elements
 const duplicateHtml = (element, quantity) => {
@@ -48,17 +48,30 @@ animate(waveDrawable, {
 });
 
 // Cross element
-const crosses = document.querySelector('#crosses')
-duplicateHtml(crosses, 10)
+const crosses = document.querySelector('#crosses');
+duplicateHtml(crosses, 10);
 
 // Cross animation
 animate('#crosses path', {
-    rotate: {
-        to: 360,
-        duration: 1200,
-    },
-    delay: (el, i, l) => i * 100,
+  rotate: {
+    to: 360,
+    duration: 1200,
+  },
+  delay: (el, i, l) => i * 100,
+  loop: true,
+  alternate: true,
+  ease: 'inOutSine',
+});
+
+// dots element
+duplicateHtml(document.querySelector('#dots'), 40);
+const dots = document.querySelectorAll('#dots .dot');
+dots.forEach(dot => {
+  animate(dot, {
+    rotate: (el, i) => utils.random(90, 360),
+    duration: (el, i) => utils.random(250, 750),
     loop: true,
     alternate: true,
-    ease: 'inOutSine'
-})
+    ease: 'inOutSine',
+  });
+});
