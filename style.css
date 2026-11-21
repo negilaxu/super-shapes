@@ -35,7 +35,28 @@
 }
 
 .page {
-    border: 4px solid #000;
+    border-left: 4px solid #000;
+    border-right: 4px solid #000;
+    position: relative;
+}
+
+.page:after,
+.page:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #000;
+    z-index: 3;
+}
+
+.page:before {
+    top: 0;
+}
+
+.page:after {
+    bottom: 0;
 }
 
 .dot {
