@@ -86,3 +86,13 @@ animate('#circles .dot', {
   loop: true,
   alternate: true,
 });
+
+// Flash animation
+animate('#flashes .flash', {
+  backgroundColor: (el, i) => ['#fff636', '#cb89fc', '#fc3035', '#77ebfd'][i],
+  delay: (el, i) => utils.random(50, 100),
+  duration: 500,
+  loop: true,
+  alternate: true,
+  ease: 'inOutSine',
+});
